@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Грилиш - Портфолио</title>
+    <title>Грилиш - Сайт</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -17,6 +17,8 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            margin: 0;
+            padding: 0;
         }
         body::before {
             content: "";
@@ -45,6 +47,9 @@
             margin: 20px;
             position: relative;
             animation: float 3s infinite ease-in-out alternate;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         @keyframes float {
             from {
@@ -63,6 +68,8 @@
             border-radius: 5px;
             transition: 0.3s;
             display: inline-block;
+            text-align: center;
+            min-width: 120px;
         }
         .tiktok {
             background: #ff0050;
@@ -74,6 +81,16 @@
         }
         .social-links a:hover {
             transform: scale(1.1);
+        }
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.8em;
+                padding: 15px;
+            }
+            .social-links a {
+                font-size: 1.2em;
+                padding: 8px 15px;
+            }
         }
     </style>
 </head>
