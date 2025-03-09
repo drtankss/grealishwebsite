@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Грилиш - Сайт</title>
+    <title>Грилиш - Портфолио</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
         body {
             background-color: black;
@@ -16,17 +22,21 @@
             font-family: 'Arial', sans-serif;
             text-align: center;
             position: relative;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
         }
         body::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             background: url('https://static0.givemesportimages.com/wordpress/wp-content/uploads/2024/10/mixcollage-30-oct-2024-08-19-am-3615.jpg') no-repeat center center/cover;
             opacity: 0.2;
             z-index: -1;
@@ -38,18 +48,19 @@
             padding: 20px;
             background: linear-gradient(45deg, #ff416c, #ff4b2b);
             border-radius: 10px;
-            margin: 20px;
+            margin-bottom: 20px;
             box-shadow: 0px 0px 15px rgba(255, 75, 43, 0.7);
             font-family: 'Playfair Display', serif;
             letter-spacing: 2px;
+            text-align: center;
+            max-width: 90%;
         }
         .social-links {
-            margin: 20px;
-            position: relative;
-            animation: float 3s infinite ease-in-out alternate;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            gap: 15px;
+            animation: float 3s infinite ease-in-out alternate;
         }
         @keyframes float {
             from {
@@ -63,13 +74,12 @@
             color: white;
             font-size: 1.5em;
             text-decoration: none;
-            margin: 10px;
             padding: 10px 20px;
             border-radius: 5px;
             transition: 0.3s;
             display: inline-block;
-            text-align: center;
             min-width: 120px;
+            text-align: center;
         }
         .tiktok {
             background: #ff0050;
@@ -92,6 +102,19 @@
                 padding: 8px 15px;
             }
         }
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.5em;
+                padding: 10px;
+            }
+            .social-links {
+                flex-direction: column;
+            }
+            .social-links a {
+                font-size: 1em;
+                padding: 6px 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -99,8 +122,9 @@
         <h1>Добро пожаловать на сайт Грилиша</h1>
     </header>
     <section class="social-links">
-        <a href="https://www.tiktok.com/@drtankks" class="tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
-        <a href="https://t.me/drtankss" class="telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
+        <a href="YOUR_TIKTOK_LINK_HERE" class="tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="YOUR_TELEGRAM_LINK_HERE" class="telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
     </section>
 </body>
 </html>
+
